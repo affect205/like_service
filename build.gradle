@@ -1,0 +1,39 @@
+group 'org.alexside'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // cassandra
+    //compile 'com.datastax.cassandra:cassandra-driver-core:3.7.1'
+    compile group: 'com.datastax.cassandra', name: 'cassandra-driver-core', version: '3.6.0'
+    compile 'org.cassandraunit:cassandra-unit:3.0.0.1'
+
+    // netty
+    compile group: 'io.netty', name: 'netty-all', version: '4.1.33.Final'
+
+    // juice
+    compile group: 'com.google.inject', name: 'guice', version: '4.2.2'
+
+    // commons
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.11'
+    compile group: 'commons-logging', name: 'commons-logging', version: '1.2'
+    compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.2'
+    compile group: 'org.apache.commons', name: 'commons-configuration2', version: '2.4'
+    compile group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.3'
+
+    // logging
+    compile 'ch.qos.logback:logback-core:1.2.3'
+    compile 'ch.qos.logback:logback-classic:1.2.3'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+}
